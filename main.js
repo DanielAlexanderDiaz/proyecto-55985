@@ -14,6 +14,7 @@ const helado3 = { id: 3,nombre: 'Helado de crema'}
 const helados = [helado1, helado2, helado3]
 
 function listarHelados(helados){
+
     let mensaje = "Lista de helados disponibles \n \n"
 
     for (let i = 0; i < helados.length; i++) {
@@ -28,6 +29,7 @@ listarHelados(helados)
 let opcion = prompt("Eligue una opción")
 
 function buscarHelado(array,opcion){
+    
     let objeto = array[opcion-1]
     let nombre = objeto.nombre
 
