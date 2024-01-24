@@ -1,5 +1,6 @@
 
-alert("Bienvenido a Los Más Sabrosos")
+/*
+alert("Bienvenido a la heladeria: Los Más Sabrosos")
 
 let nombrePersona = prompt("Cual es tu nombre?")
 
@@ -51,6 +52,32 @@ switch(opcion > 0 ){
         alert("Opción no valida")
         break
 }
+*/
+const helado1 = { id: 1,nombre: 'Helado de chocolate'} 
+
+const helado2 = { id: 2,nombre: 'Helado de vainilla'} 
+
+const helado3 = { id: 3,nombre: 'Helado de crema'} 
+
+const helados = [helado1, helado2, helado3]
+
+
+
+
+
+alert("Bienvenido a la heladeria: Los Más Sabrosos")
+
+let confirmacion = prompt("si o no")
+
+while(confirmacion=="SI"){
+    alert(nombrePersona + ", que helado te gustaria")
+
+}
+
+
+
+
+
 
 
 
