@@ -1,8 +1,8 @@
 const helado1 = { id: 1,nombre: 'Helado de chocolate'} 
 
-const helado2 = { id: 2,nombre: 'Helado de vainilla'} 
+const helado2 = { id: 2 , nombre: 'Helado de vainilla' , stock: 10} 
 
-const helado3 = { id: 3,nombre: 'Helado de crema'} 
+const helado3 = { id: 3 , nombre: 'Helado de crema' , stock: 10} 
 
 const negacion = { id: 4,nombre: 'Salir'} 
 
@@ -13,7 +13,7 @@ function listarHelados(helados){
     let mensaje = "Lista de helados disponibles \n \n"
 
     for (let i = 0; i < helados.length; i++) {
-        mensaje += helados[i].id + " - " +helados[i].nombre + "\n"
+        mensaje += helados[i].id + " - " + helados[i].nombre + " -  $" + helados[i].stock + "\n"
     }
 
     alert(mensaje)
@@ -44,13 +44,12 @@ switch(primeraOpcion > 0 ){
     case primeraOpcion == 1:
         alert("elegiste la opción 1: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
         break
-
-    case primeraOpcion == 2:
-        alert("elegiste la opción 2: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
+    case opcion == 2:
+        alert("elegiste la opción 2: " + buscarHelado(helados,opcion) + "\n" + "Que lo disfrutes!!")
+        alert(buscarHelado(helados,opcion))
         break
-
-    case primeraOpcion == 3:
-        alert("elegiste la opción 3: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
+    case opcion == 3:
+        alert("elegiste la opción 3: " + buscarHelado(helados,opcion) + "\n" + "Que lo disfrutes!!")
         break
 
     case primeraOpcion > 3:
