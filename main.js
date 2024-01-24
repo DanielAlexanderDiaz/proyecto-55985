@@ -1,10 +1,10 @@
-const helado1 = { id: 1,nombre: 'Helado de chocolate'} 
+const helado1 = { id: 1,nombre: 'Helado de chocolate', stock: 10} 
 
 const helado2 = { id: 2 , nombre: 'Helado de vainilla' , stock: 10} 
 
 const helado3 = { id: 3 , nombre: 'Helado de crema' , stock: 10} 
 
-const negacion = { id: 4,nombre: 'Salir'} 
+const negacion = { id: 4,nombre: 'Salir', stock: 10} 
 
 const helados = [helado1, helado2, helado3,negacion]
 
@@ -45,11 +45,10 @@ switch(primeraOpcion > 0 ){
         alert("elegiste la opción 1: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
         break
     case opcion == 2:
-        alert("elegiste la opción 2: " + buscarHelado(helados,opcion) + "\n" + "Que lo disfrutes!!")
-        alert(buscarHelado(helados,opcion))
+        alert("elegiste la opción 2: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
         break
     case opcion == 3:
-        alert("elegiste la opción 3: " + buscarHelado(helados,opcion) + "\n" + "Que lo disfrutes!!")
+        alert("elegiste la opción 3: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
         break
 
     case primeraOpcion > 3:
