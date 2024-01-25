@@ -39,17 +39,16 @@ listarHelados(helados)
 
 let primeraOpcion = prompt("Eligue una opción")
 
-switch(primeraOpcion > 0 ){
+switch(primeraOpcion == 1 || primeraOpcion == 2 || primeraOpcion == 3){
 
     case primeraOpcion == 1:
         alert("elegiste la opción 1: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
-        break
+        
     case opcion == 2:
         alert("elegiste la opción 2: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
-        break
+
     case opcion == 3:
         alert("elegiste la opción 3: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
-        break
 
     case primeraOpcion > 3:
         alert("Adios")
