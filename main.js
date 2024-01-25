@@ -8,12 +8,12 @@ const carrito = []
 
 /********************************************************************/
 
-function listarHelados(helados){
+function listarHelados(array){
 
     let mensaje = "Lista de helados disponibles \n \n"
 
-    for (let i = 0; i < helados.length; i++) {
-        mensaje += helados[i].id + " - " + helados[i].nombre + " -  $" + helados[i].precio + "\n"
+    for (let i = 0; i < array.length; i++) {
+        mensaje += array[i].id + " - " + array[i].nombre + " -  $" + array[i].precio + "\n"
     }
 
     alert(mensaje)
@@ -21,12 +21,15 @@ function listarHelados(helados){
 
 function listarCarrito(array){
 
+    let mensaje = "Lista del pedido \n \n"
+
     for (const productoCarrito of array) {
 
-        console.log(productoCarrito)
+        mensaje += productoCarrito + "\n"
 
     }
 
+    alert(mensaje)
 }
 
 function buscarHelado(id){
@@ -105,9 +108,8 @@ while(seleccion != 'no'){
 
    while(seleccion == 'no'){
 
-        alert("Tus productos seleccionados \n")
-
         listarCarrito(carrito)
+        console.log(carrito)
 
         alert("Espero que vuelvas pronto, adios")
 
