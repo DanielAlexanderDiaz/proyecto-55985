@@ -25,7 +25,7 @@ function listarCarrito(array){
 
     for (let i = 0; i < array.length; i++) {
 
-        mensaje += "Producto: " + array[i].nombreHelado + " - Precio: $" + array[i].precioHelado + " - Cantidad: " + array[i].unidadesHelado + "\n"
+        mensaje += "Cantidad:" + array[i].unidadesHelado + " - "+ array[i].nombreHelado + " - Precio:$ " + array[i].precioHelado + "- Total:$ " + totalPorHelado(array[i].precioHelado,array[i].unidadesHelado) + "\n"
 
     }
 
@@ -46,6 +46,13 @@ function buscarPrecioHelado(id){
     let precio = objeto.precio
 
     return precio
+}
+
+function totalPorHelado(precio,cantidad){
+
+    let operacion = precio * cantidad
+
+    return operacion
 }
 
 /******************************************************************/
