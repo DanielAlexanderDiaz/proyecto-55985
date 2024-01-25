@@ -1,14 +1,19 @@
-const helado1 = { id: 1,nombre: 'Helado de chocolate'} 
+/*const helado1 = { id: 1,nombre: 'Helado de chocolate', stock: 10} 
 
 const helado2 = { id: 2 , nombre: 'Helado de vainilla' , stock: 10} 
 
-const helado3 = { id: 3 , nombre: 'Helado de crema' , stock: 10} 
+const helado3 = { id: 3 , nombre: 'Helado de crema' , stock: 10} */
 
-const negacion = { id: 4,nombre: 'Salir'} 
 
-const helados = [helado1, helado2, helado3,negacion]
+const helados = [
+                { id: 1,nombre: 'Helado de chocolate', precio: 10},
+                { id: 2 , nombre: 'Helado de vainilla' , precio: 10},
+                { id: 3 , nombre: 'Helado de crema' , precio: 10} 
+                ]
 
-function listarHelados(helados){
+const carro = []
+
+/*function listarHelados(helados){
 
     let mensaje = "Lista de helados disponibles \n \n"
 
@@ -17,29 +22,28 @@ function listarHelados(helados){
     }
 
     alert(mensaje)
-}
+}*/
 
-function buscarHelado(array,opcion){
+/*function buscarHelado(array,opcion){
     
     let objeto = array[opcion-1]
     let nombre = objeto.nombre
 
     return nombre
-}
+}*/
 
 /******************************************************************/
 
 alert("Bienvenido a la heladeria: Los Más Sabrosos")
 
-let nombrePersona = prompt("Cual es tu nombre?")
+let seleccion = prompt("Desea comprar algun helado? si o no")
 
-alert(nombrePersona + ", Cual helado te gustaria?")
+while(seleccion != "si" && seleccion != "no"){
+    alert("Favor de ingresar si o no")
+    seleccion = prompt("Desea comprar algun helado? si o no")
+}
 
-listarHelados(helados)
-
-let primeraOpcion = prompt("Eligue una opción")
-
-switch(primeraOpcion > 0 ){
+/*switch(primeraOpcion > 0 ){
 
     case primeraOpcion == 1:
         alert("elegiste la opción 1: " + buscarHelado(helados,primeraOpcion) + "\n" + "Que lo disfrutes!!")
@@ -100,7 +104,7 @@ else if(primeraOpcion > 0 && segundaOpcion == null){
 
     alert("error")
 
-}
+}*/
 
 
 
