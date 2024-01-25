@@ -23,21 +23,29 @@ function listarCarrito(array){
 
     let mensaje = "Lista del pedido \n \n"
 
-    for (const productoCarrito of array) {
+    for (let i = 0; i < array.length; i++) {
 
-        mensaje += productoCarrito + "\n"
+        mensaje += "Producto: " + array[i].nombreHelado + " - Precio: $" + array[i].precioHelado + " - Cantidad: " + array[i].unidadesHelado + "\n"
 
     }
 
     alert(mensaje)
 }
 
-function buscarHelado(id){
+function buscarNombreHelado(id){
     
     let objeto = helados[id-1]
     let nombre = objeto.nombre
 
     return nombre
+}
+
+function buscarPrecioHelado(id){
+    
+    let objeto = helados[id-1]
+    let precio = objeto.precio
+
+    return precio
 }
 
 /******************************************************************/
@@ -69,26 +77,26 @@ while(seleccion != 'no'){
     let productoSeleccionado = parseInt(prompt("Agregar un producto, ingresar su numero"))
 
     let nombre
-    let precio = 0
+    let precio
+    let unidades
 
    if(productoSeleccionado == 1 || productoSeleccionado == 2 || productoSeleccionado == 3){
-
 
     switch(productoSeleccionado){
 
         case 1:
-            nombre = buscarHelado(productoSeleccionado)
-            precio = 1000
+            nombre = buscarNombreHelado(productoSeleccionado)
+            precio = buscarPrecioHelado(productoSeleccionado)
             break
 
         case 2:
-            nombre = buscarHelado(productoSeleccionado)
-            precio = 950
+            nombre = buscarNombreHelado(productoSeleccionado)
+            precio = buscarPrecioHelado(productoSeleccionado)
             break
 
         case 3:
-            nombre = buscarHelado(productoSeleccionado)
-            precio = 900
+            nombre = buscarNombreHelado(productoSeleccionado)
+            precio = buscarPrecioHelado(productoSeleccionado)
             break
         
         default:
@@ -96,7 +104,11 @@ while(seleccion != 'no'){
 
    }
 
-   carrito.push(nombre,precio)
+   unidades = parseInt(prompt("cuantas cantidades desea?, ingresar su numero"))
+
+   const helado = {nombreHelado : nombre, precioHelado: precio, unidadesHelado: unidades}
+
+   carrito.push(helado)
 
    } else{
 
@@ -109,7 +121,6 @@ while(seleccion != 'no'){
    while(seleccion == 'no'){
 
         listarCarrito(carrito)
-        console.log(carrito)
 
         alert("Espero que vuelvas pronto, adios")
 
